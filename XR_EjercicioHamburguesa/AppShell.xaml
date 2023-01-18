@@ -13,15 +13,13 @@
         Route="MainPage" />-->
 
     <ShellContent
-        Title="BurgerItemPage"
-        ContentTemplate="{DataTemplate views:BurgerItemPage}"
-        Route="BurgerItemPage" />
-    
-    <ShellContent
         Title="BurgerListPage"
         ContentTemplate="{DataTemplate views:BurgerListPage}"
         Route="BurgerListPage" />
-
     
+    <ShellContent
+        Title="BurgerItemPage"
+        ContentTemplate="{DataTemplate views:BurgerItemPage}"
+        Route="BurgerItemPage" />
 
 </Shell>

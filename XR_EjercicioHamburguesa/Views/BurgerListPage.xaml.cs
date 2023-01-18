@@ -8,12 +8,16 @@ public partial class BurgerListPage : ContentPage
     {
         InitializeComponent();
         List<Burger> burger = App.XRBurgerRepo.GetAllBurgers();
+        BindingContext = this;
         burgerList.ItemsSource = burger;
     }
 
     async void XROnItemAdded(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(BurgerItemPage));
+        await Shell.Current.GoToAsync(nameof(BurgerItemPage), true, new Dictionary<string, object>
+        {
+            ["Item"] = new Burger()
+        });
     }
 
     public void XRUpdate()
@@ -28,5 +32,14 @@ public partial class BurgerListPage : ContentPage
         {
             XRUpdate();
         }
+    }
+
+    async void burgerList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(BurgerItemPage), true, new Dictionary<string, object>
+        {
+            ["Item"] = (Burger)e.CurrentSelection.FirstOrDefault()
+        });
+
     }
 }
