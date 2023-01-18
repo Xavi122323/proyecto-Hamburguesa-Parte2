@@ -24,9 +24,12 @@
             
             <Button Text="Guardar"
             Clicked="XROnSaveClicked" />
-            
+
             <Button Text="Cancelar"
                 Clicked="XROnCancelClicked" />
+
+            <Button Text="Eliminar"
+                Clicked="XROnDeleteClicked" />
             
         </VerticalStackLayout>
     </ScrollView>
