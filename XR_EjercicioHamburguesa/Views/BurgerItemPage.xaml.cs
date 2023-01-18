@@ -24,4 +24,10 @@ public partial class BurgerItemPage : ContentPage
     {
         Shell.Current.GoToAsync("///BurgerListPage");
     }
+
+    private void XROnDeleteClicked(object sender, EventArgs e)
+    {
+        
+        Shell.Current.GoToAsync("///BurgerListPage");
+    }
 }
