@@ -20,7 +20,7 @@
             <Label Text="¿Con queso extra?" />
             
             <CheckBox x:Name="check"
-            CheckedChanged="XROnCheckBoxCheckedChanged" />
+            IsChecked="{Binding XRWithExtraCheese}" />
             
             <Button Text="Guardar"
             Clicked="XROnSaveClicked" />
