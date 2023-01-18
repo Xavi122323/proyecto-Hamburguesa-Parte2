@@ -27,7 +27,7 @@ public partial class BurgerItemPage : ContentPage
 
     private void XROnDeleteClicked(object sender, EventArgs e)
     {
-        
+        App.XRBurgerRepo.DeleteBurger(Item);
         Shell.Current.GoToAsync("///BurgerListPage");
     }
 }

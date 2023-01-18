@@ -43,5 +43,11 @@ namespace XR_EjercicioHamburguesa.Data
             List<Burger> burgers = conn.Table<Burger>().ToList();
             return burgers;
         }
+
+        public int DeleteBurger(Burger burger)
+        {
+            Init();
+            return conn.Delete(burger);
+        }
     }
 }
