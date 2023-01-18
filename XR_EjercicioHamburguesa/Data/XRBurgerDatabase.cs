@@ -27,8 +27,14 @@ namespace XR_EjercicioHamburguesa.Data
         public int AddNewBurger(Burger burger)
         {
             Init();
-            int result = conn.Insert(burger);
-            return result;
+            if (burger.Id != 0)
+            {
+                return conn.Update(burger);
+            }
+            else
+            {
+                return conn.Insert(burger);
+            }
         }
 
         public List<Burger> GetAllBurgers()
